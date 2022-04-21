@@ -1,6 +1,6 @@
-baseURL = "https://lines-hugo-theme.netlify.app/"
+baseURL = "https://niecore.xyz"
 languageCode = "en-us"
-title = "Lines - Minimalist Hugo theme"
+title = "https://niecore.xyz"
 disableKinds = ["section", "categories"]
 disqusShortname = ""
 pygmentsCodeFences = false
@@ -8,6 +8,8 @@ pygmentsUseClasses = false
 paginate = 999
 minify = true
 
+[markup.goldmark.renderer]
+  unsafe = true
 
 [taxonomies]
   tag = "tags"
@@ -27,18 +29,18 @@ minify = true
     disable = true
 
 [Author]
-  name = ""
+  name = "Nico Müller"
 
 [params]
   description = ""
   author = ""
-  copyright = ""
+  copyright = "Nico Müller"
   logo = ""
 
 [frontmatter]
   date  = [":filename", ":default"]
-  author = ""
-  github = ""
+  author = "Nico Müller"
+  github = "https://github.com/niecore"
   facebook = ""
   og_image = ""
   sitename = ""
