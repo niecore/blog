@@ -1,0 +1,15 @@
+{{ $original := .Page.Resources.GetMatch (.Get 0) }}
+{{ $options := .Get 1 }}
+{{ .Scratch.Set "image" ($original.Fit $options) }}
+{{ $image := .Scratch.Get "image" }}
+{{ $title := .Get 2 }}
+{{ $class := .Get 3 }}
+
+<figure class="figure">
+    {{ $url := .Get 0 }}
+    {{ if not (findRE "^(/|http(s?)://)" $url) }}
+        {{ $url = ($.Page.Resources.GetMatch $url).RelPermalink }}
+    {{ end }}
+    <a href="{{ $url }}"><img src="{{ $image.RelPermalink }}" alt="{{ .Get 2 }}" class="figure-img img-fluid" width="{{ $image.Width }}" height="{{ $image.Height }}"></a>
+    {{ with .Get 2 }}<figcaption class="figure-caption">{{ . }}</figcaption>{{ end }}
+</figure>
