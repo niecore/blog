@@ -30,6 +30,7 @@ minify = true
 
 [Author]
   name = "Nico Müller"
+  email = "nicomueller1991@googlmail.com"
 
 [params]
   description = ""
