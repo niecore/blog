@@ -4,6 +4,7 @@ date: 2022-03-09T10:13:04+01:00
 draft: false
 tags: 
   - git
+  - swe
 ---
 
 When working with git mirrors you often run into the problem that you want to push a changeset to the upstream repository instead of your mirror.
